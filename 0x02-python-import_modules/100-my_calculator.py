@@ -4,9 +4,9 @@ if __name__ == "__main__":
     import sys
     argv = sys.argv[1:]
     count = len(argv)
-    operator = ['+', '-', '*', '/'] 
+    operator = ['+', '-', '*', '/']
 
-    if count != 3: 
+    if count != 3:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
     elif sys.argv[2] not in operator:
