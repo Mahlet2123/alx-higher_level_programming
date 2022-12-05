@@ -5,5 +5,4 @@ def print_matrix_integer(matrix=[[]]):
     if len(matrix) == 0:
         print()
     for row in matrix:
-#        for item in row:
-            print(' '.join('{}'.format(item)for item in row))
+        print(' '.join('{}'.format(item) for item in row))
