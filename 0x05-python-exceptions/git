@@ -1,0 +1,4 @@
+git add .
+git commit -m "task 0x05"
+git push
+
