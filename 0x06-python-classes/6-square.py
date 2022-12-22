@@ -72,7 +72,7 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            [print() for new_line in range(1, self.__position[1])]
+            [print() for new_line in range(0, self.__position[1])]
         for i in range(0, self.__size):
             [print(" ", end="") for space in range(self.__position[0])]
             [print("#", end="") for j in range(self.__size)]
