@@ -34,7 +34,7 @@ class Square:
 
     def __str__(self):
         """stringifyies a value"""
-        return self.my_ret
+        return (self.my_ret[:-1])
 
 
     def __init__(self, size=0, position=(0, 0)):
@@ -89,6 +89,7 @@ class Square:
                 ret += "#"
             ret += "\n"
         return ret
+
     def my_print(self):
         """ prints the square"""
         print (self.ret, end="")
