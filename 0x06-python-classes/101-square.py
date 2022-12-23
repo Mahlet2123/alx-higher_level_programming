@@ -34,7 +34,8 @@ class Square:
 
     def __str__(self):
         """stringifyies a value"""
-        return self.my_print()
+        return self.my_ret
+
 
     def __init__(self, size=0, position=(0, 0)):
         """Instantiation with optional size"""
@@ -72,13 +73,22 @@ class Square:
         """the current square area"""
         return self.__size**2
 
-    def my_print(self):
+    def my_ret(self):
         """Public instance method"""
+        ret = ""
+
         if self.__size == 0:
-            print()
+            return "\n"
         else:
-            [print() for new_line in range(0, self.__position[1])]
+            for new_line in range(0, self.__position[1]):
+                ret += "\n"
         for i in range(0, self.__size):
-            [print(" ", end="") for space in range(self.__position[0])]
-            [print("#", end="") for j in range(self.__size)]
-            print()
+            for space in range(self.__position[0]):
+                ret += " "
+            for j in range(self.__size):
+                ret += "#"
+            ret += "\n"
+        return ret
+    def my_print(self):
+        """ prints the square"""
+        print (self.ret, end="")
