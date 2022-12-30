@@ -6,7 +6,7 @@ if __name__ == "__main__":
     index = 1
     if argv_count == 0:
         print('{} arguments.'.format(argv_count))
-    if argv_count > 0:
+    if argv_count >= 1:
         print('{} arguments:'.format(argv_count))
         while (index <= argv_count):
             print('{:d}: {:s}'.format(index, sys.argv[index]))
