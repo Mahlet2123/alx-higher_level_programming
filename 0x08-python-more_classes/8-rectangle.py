@@ -53,9 +53,8 @@ class Rectangle:
             return ""
         if self.__height == 0:
             return ""
-        return ((f"{str(self.print_symbol)}" * self.__width + "\n") * self.__height)[
-            :-1
-        ]
+        return ((f"{str(self.print_symbol)}" * self.__width + "\n") *
+                self.__height)[:-1]
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
@@ -63,3 +62,19 @@ class Rectangle:
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+    def __gt__(rect_1, rect_2):
+        return rect_1
+
+    def __lt__(rect_1, rect_2):
+        return rect_2
+
+    def __eq__(rect_1, rect_2):
+        return rect_1        
