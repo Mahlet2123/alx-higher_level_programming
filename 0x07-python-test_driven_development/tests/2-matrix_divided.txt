@@ -73,3 +73,8 @@ Test missing argument:
 	Traceback (most recent call last):
 	...
 	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Test float(inf):
+
+	>>> matrix_divided(matrix, float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
