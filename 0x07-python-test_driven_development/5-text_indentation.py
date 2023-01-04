@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""module for text_indentation method"""
+
+
 def text_indentation(text):
     """
     function that prints a text with 2 new lines
