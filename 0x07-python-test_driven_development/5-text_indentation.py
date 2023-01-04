@@ -10,8 +10,14 @@ def text_indentation(text):
     new_text = ""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    for i in text:
-        new_text = 
-        if i in ('.', '?', ':'):
+    i = 0
+    for item in text:
+        if item in ".:?":
+            if text[i + 1] == " ":
+                text = text[:i + 1] + text[i + 2:]
+        else:
+            i += 1
+    for j in text:
+        print(j, end="")
+        if j in ('.', '?', ':'):
             print("\n")
-            lstrip()
