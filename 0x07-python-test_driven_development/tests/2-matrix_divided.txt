@@ -39,3 +39,22 @@ Test matrix must be a matrix (array of arrays of integers/floats):
 	Traceback (most recent call last):
 	...
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test division by zero:
+
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	...
+	ZeroDivisionError: division by zero
+
+Test division by integer:
+
+	>>> matrix_divided(matrix, 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Test division by string:
+	>>> matrix_divided(matrix, "3")
+	Traceback (most recent call last):
+	...
+	TypeError: div must be a number
