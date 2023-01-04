@@ -1,3 +1,9 @@
+The ``0-add_integer.txt`` module
+======================
+
+Using ``0-add_integer.py``
+-------------------
+
 >>> add_integer = __import__('0-add_integer').add_integer
 
 >>> add_integer(2)
