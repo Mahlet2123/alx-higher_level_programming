@@ -13,6 +13,7 @@ def text_indentation(text):
     new_text = ""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+    """
     i = 0
     for item in text:
         if item in ".:?":
@@ -24,3 +25,8 @@ def text_indentation(text):
         print(j, end="")
         if j in ('.', '?', ':'):
             print("\n")
+    """
+    for delim in ".?:":
+        text = (delim + "\n\n").join(
+                [line.strip(" ") for line in text.split(delim)])
+    print(text, end="")
