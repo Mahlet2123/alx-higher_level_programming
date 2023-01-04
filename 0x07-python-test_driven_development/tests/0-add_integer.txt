@@ -4,7 +4,6 @@ usage: add_integer function
 This function returns the sum of two integers
 and one of the parameter is defaluted to 98
 
-
 Import function from module:
 	>>> add_integer = __import__('0-add_integer').add_integer
 
