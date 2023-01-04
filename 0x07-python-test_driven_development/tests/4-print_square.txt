@@ -1,0 +1,56 @@
+The ``4-print_square.txt`` module
+======================
+
+Using ``print_square``
+-------------------
+
+Importing function from module:
+
+	>>> print_square = __import__('4-print_square').print_square
+
+Test with an int size:
+
+	>>> print_square(2)
+	##
+	##
+
+Test with string argument:
+
+	>>> print_square("2")
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+Test with a float argument:
+
+	>>> print_square(2.79)
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+Test with a negative float:
+
+	>>> print_square(-2.79)
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+Test with a negative integer argument:
+
+	>>> print_square(-2)
+	Traceback (most recent call last):
+	...
+	ValueError: size must be >= 0
+
+Test with 0 size:
+
+	>>> print_square(0)
+	
+
+Test with no argument entered:
+
+	>>> print_square()
+	Traceback (most recent call last):
+	...
+	TypeError: print_square() missing 1 required positional argument: 'size'
+	
