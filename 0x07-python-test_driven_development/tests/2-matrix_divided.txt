@@ -1,0 +1,33 @@
+The ``2-matrix_divided.py`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+Import function from module:
+	
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test matrix must be a list of lists:
+
+	>>> matrix = "string"
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix(list of lists) of integers/floats
+
+Test matrix must be a list of lists:
+
+	>>> matrix = "string"
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix(list of lists) of integers/floats
+
+Test Each row of the matrix must be of the same size:
+
+	>>> matrix = [[1, 2, 3], [1, 2, 3, 4]]
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+	...
+	TypeError: Each row of the matrixmust have the same size
