@@ -1,61 +1,74 @@
 The ``0-add_integer.txt`` module
 ======================
 
-Using ``0-add_integer.py``
+Using ``add_integer``
 -------------------
 
 Import function from module:
+
 	>>> add_integer = __import__('0-add_integer').add_integer
 
 Test one int argument:
+
 	>>> add_integer(2)
 	100
 
 Test two int argument:
+
 	>>> add_integer(2, 98)
 	100
 
 Check second default argument:
+
 	>>> add_integer(0)
 	98
 
 Test one float argument:
+
 	>>> add_integer(56.78)
 	154
 
 Test one negative float argument:
+
 	>>> add_integer(-56.78)
 	42
 
 Test two big integers:
+
 	>>> add_integer(999999998, 999999999)
 	1999999997
 
 Test two arguments (b is negative):
+
 	>>> add_integer(999999998, -999999999)
 	-1
 
 Test two arguments (a is negative):
+
 	>>> add_integer(-999999998, 999999999)
 	1
 
 Test two floats:
+
 	>>> add_integer(0.9, 0.9)
 	0
 
 Add NaN:
+
 	>>> add_integer(float('nan'), 9)
 	Traceback (most recent call last):
 	...
 	ValueError: cannot convert float NaN to integer
 
 Test float overflow:
+
 	>>> add_integer(float('inf'), 8)
 	Traceback (most recent call last):
 	...
 	OverflowError: cannot convert float infinity to integer
 
 Check type:
+
 	>>> add_integer("school", 5)
 	Traceback (most recent call last):
 	...

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def add_integer(a, b=98):
     """a function that adds 2 integers.
-       Returns an integer: the addition of a and b
+    Returns an integer: the addition of a and b
     """
     if type(a) not in (int, float):
         raise TypeError("a must be an integer")
@@ -9,6 +9,8 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
     return int(a) + int(b)
 
+
 if __name__ == "__main__":
     import doctest
+
     doctest.testfile("tests/0-add_integer.txt")
