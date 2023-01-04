@@ -1,8 +1,5 @@
-The ``0-add_integer.txt`` module
-======================
-
-Using ``add_integer``
--------------------
+usage: add_integer function
+***************************
 
 This function returns the sum of two integers
 and one of the parameter is defaluted to 98
