@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 def matrix_divided(matrix, div):
+    """
+    a function that divides all elements of a matrix
+
+    Returns a new matrix
+    """
     if type(div) not in (int, float):
         raise TypeError("div must be a number")
     elif div == 0:

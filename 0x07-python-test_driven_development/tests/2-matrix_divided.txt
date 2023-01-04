@@ -31,3 +31,11 @@ Test Each row of the matrix must be of the same size:
 	Traceback (most recent call last):
 	...
 	TypeError: Each row of the matrixmust have the same size
+
+Test matrix must be a matrix (array of arrays of integers/floats):
+
+	>>> matrix = [[3, "9"], [15, 3]]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix(list of lists) of integers/floats
