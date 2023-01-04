@@ -14,7 +14,7 @@ Test matrix must be a list of lists:
 	>>> matrix_divided(matrix, 2)
 	Traceback (most recent call last):
 	...
-	TypeError: matrix must be a matrix(list of lists) of integers/floats
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Test matrix must be a list of lists:
 
@@ -22,7 +22,7 @@ Test matrix must be a list of lists:
 	>>> matrix_divided(matrix, 2)
 	Traceback (most recent call last):
 	...
-	TypeError: matrix must be a matrix(list of lists) of integers/floats
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Test Each row of the matrix must be of the same size:
 
@@ -30,7 +30,7 @@ Test Each row of the matrix must be of the same size:
 	>>> matrix_divided(matrix, 2)
 	Traceback (most recent call last):
 	...
-	TypeError: Each row of the matrixmust have the same size
+	TypeError: Each row of the matrix must have the same size
 
 Test matrix must be a matrix (array of arrays of integers/floats):
 
@@ -38,4 +38,4 @@ Test matrix must be a matrix (array of arrays of integers/floats):
 	>>> matrix_divided(matrix, 3)
 	Traceback (most recent call last):
 	...
-	TypeError: matrix must be a matrix(list of lists) of integers/floats
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
