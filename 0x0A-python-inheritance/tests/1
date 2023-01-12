@@ -13,7 +13,8 @@ Correct Class Type test:
     True
 
 Correct Instance test:
-    >>> issubclass(MyList, list)
+    >>> ml = MyList()
+    >>> isinstance(ml, list)
     True
 
 print_sorted method is an instance method:
