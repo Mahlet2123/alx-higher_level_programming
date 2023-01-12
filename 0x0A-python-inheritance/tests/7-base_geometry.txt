@@ -100,7 +100,7 @@ test with a value which is a list:
 
 test with a value which is a dict:
 
-	>>> new.integer_validator("number", {"num": 3})
+	>>> new.integer_validator("number", {})
 	Traceback (most recent call last):
 	...
 	TypeError: number must be an integer
