@@ -1,4 +1,6 @@
-# alx-higher_level_programming
+# alx-higher_level_programming Using Python and JavaScript
+
+## The second sprint in the ALX SE program - Python
 
 # Description
 
