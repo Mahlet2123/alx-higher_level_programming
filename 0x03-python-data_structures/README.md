@@ -40,7 +40,8 @@
 - Complete the source code in order to switch value of a and b
 
 ## 13. [Linked list palindrome](./13-is_palindrome.c)
-- Technical interview preparation:
+- Technical interview preparation: Write a function in C that checks if a singly linked list is a palindrome.
 
 ## 14. [CPython #0: Python lists](./100-print_python_list_info.c)
-- CPython is the reference implementation of the Python programming language. Written in C, CPython is the default and most widely used implementation of the language. Since we now know a bit of C, we can look at what is happening under the hood of Python. Let’s have fun with Python and C, and let’s look at what makes Python so easy to use.
+- CPython is the reference implementation of the Python programming language. Written in C, CPython is the default and most widely used implementation of the language. Since we now know a bit of C, we can look at what is happening under the hood of Python. Let’s have fun with Python and C, and let’s look at what makes Python so easy to use
+- Create a C function that prints some basic info about Python lists..
