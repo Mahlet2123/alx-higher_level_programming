@@ -3,10 +3,12 @@
 
 
 class Base:
-    """ class base """
+    """class base"""
+
     __nb_objects = 0
+
     def __init__(self, id=None):
-        """ Instantiation with id """
+        """Instantiation with id"""
         if id is not None:
             self.id = id
         else:

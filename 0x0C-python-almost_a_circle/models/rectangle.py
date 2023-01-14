@@ -5,7 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Class constructor """
+        """Class constructor"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -13,7 +13,7 @@ class Rectangle(Base):
         self.y = y
 
     def validate(self, name, value):
-        """ validates all values """
+        """validates all values"""
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
         if (name == "width" or name == "height") and value <= 0:
