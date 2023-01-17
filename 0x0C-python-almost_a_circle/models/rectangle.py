@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Rectangle class"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Class constructor"""
         super().__init__(id)
@@ -67,7 +68,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """ prints in stdout the Rectangle instance with the character # """
+        """prints in stdout the Rectangle instance with the character #"""
         if self.__width == 0 or self.__height == 0:
             print()
         else:
@@ -77,15 +78,16 @@ class Rectangle(Base):
             for space in range(self.__x):
                 print(" ", end="")
             for i in range(0, self.__width):
-                 print("#", end="")
+                print("#", end="")
             print()
 
     def __str__(self):
-        """ str method """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} {self.__width}/{self.__height}"
+        """str method"""
+        return f"[Rectangle] ({self.id})\
+                {self.__x}/{self.__y} {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
-        """ assigns an argument to each attribute """
+        """assigns an argument to each attribute"""
         if len(args) != 0:
             try:
                 self.id = args[0]
@@ -110,5 +112,11 @@ class Rectangle(Base):
                         self.__y = value
 
     def to_dictionary(self):
-        """ returns the dictionary representation of a Rectangle """
-        return {'x': self.__x, 'y': self.__y, 'id': self.id, 'height': self.__height, 'width': self.__width}
+        """returns the dictionary representation of a Rectangle"""
+        return {
+            "x": self.__x,
+            "y": self.__y,
+            "id": self.id,
+            "height": self.__height,
+            "width": self.__width,
+        }
