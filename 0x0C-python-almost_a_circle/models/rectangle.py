@@ -80,6 +80,7 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """ str method """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
