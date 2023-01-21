@@ -87,3 +87,8 @@ class Base:
                 # formatting with create()
                 res.append(cls.create(**res_dict))
         return res
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ opens a window and draws all the Rectangles and Squares """
+
