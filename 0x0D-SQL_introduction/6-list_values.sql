@@ -1,3 +1,2 @@
--- lists all rows of the table first_tabla from db hbtn_0c_0
--- db name is passed as arg in mysql command
+-- script that lists all rows of the table first_table from the database hbtn_0c_0
 SELECT * FROM first_table;
