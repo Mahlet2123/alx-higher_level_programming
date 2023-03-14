@@ -6,9 +6,13 @@ if (!(isNaN(size))) {
   let sq = '';
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
-      sq += string; }
+      sq += string;
+    }
     if (i < (size - 1)) {
-      sq += '\n'; } }
-  console.log(sq); }
-else {
-  console.log('Missing size'); }
+      sq += '\n';
+    }
+  }
+  console.log(sq);
+} else {
+  console.log('Missing size');
+}
