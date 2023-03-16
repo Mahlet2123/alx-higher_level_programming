@@ -471,7 +471,7 @@ Write a script that lists all shows contained in the database hbtn_0d_tvshows.
 	guillaume@ubuntu:~/$ 
 
     
-###12. No genre
+### 12. No genre
 - mandatory
 - Score: 65.0% (Checks completed: 100.0%)
 
@@ -479,19 +479,22 @@ Import the database dump from hbtn_0d_tvshows to your MySQL server: download (sa
 
 Write a script that lists all shows contained in hbtn_0d_tvshows without a genre linked.
 
-Each record should display: tv_shows.title - tv_show_genres.genre_id
-Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
-guillaume@ubuntu:~/$ cat 12-no_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
-Enter password: 
-title   genre_id
-Better Call Saul    NULL
-Homeland    NULL
-guillaume@ubuntu:~/$ 
+	Each record should display: tv_shows.title - tv_show_genres.genre_id
+	Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
+	You can use only one SELECT statement
+	The database name will be passed as an argument of the mysql command
+
+---
+
+	guillaume@ubuntu:~/$ cat 12-no_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+	Enter password: 
+	title   genre_id
+	Better Call Saul    NULL
+	Homeland    NULL
+	guillaume@ubuntu:~/$ 
 
     
-###13. Number of shows by genre
+### 13. Number of shows by genre
 - mandatory
 - Score: 65.0% (Checks completed: 100.0%)
 
@@ -499,28 +502,31 @@ Import the database dump from hbtn_0d_tvshows to your MySQL server: download (sa
 
 Write a script that lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each.
 
-Each record should display: <TV Show genre> - <Number of shows linked to this genre>
-First column must be called genre
-Second column must be called number_of_shows
-Don’t display a genre that doesn’t have any shows linked
-Results must be sorted in descending order by the number of shows linked
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
-guillaume@ubuntu:~/$ cat 13-count_shows_by_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
-Enter password: 
-genre   number_of_shows
-Drama   5
-Comedy  4
-Mystery 2
-Crime   2
-Suspense    2
-Thriller    2
-Adventure   1
-Fantasy 1
-guillaume@ubuntu:~/$ 
+	Each record should display: <TV Show genre> - <Number of shows linked to this genre>
+	First column must be called genre
+	Second column must be called number_of_shows
+	Don’t display a genre that doesn’t have any shows linked
+	Results must be sorted in descending order by the number of shows linked
+	You can use only one SELECT statement
+	The database name will be passed as an argument of the mysql command
+
+---
+	
+	guillaume@ubuntu:~/$ cat 13-count_shows_by_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+	Enter password: 
+	genre   number_of_shows
+	Drama   5
+	Comedy  4
+	Mystery 2
+	Crime   2
+	Suspense    2
+	Thriller    2
+	Adventure   1
+	Fantasy 1
+	guillaume@ubuntu:~/$ 
 
     
-###14. My genres
+### 14. My genres
 - mandatory
 - Score: 65.0% (Checks completed: 100.0%)
 
@@ -528,23 +534,26 @@ Import the database dump from hbtn_0d_tvshows to your MySQL server: download (sa
 
 Write a script that uses the hbtn_0d_tvshows database to lists all genres of the show Dexter.
 
-The tv_shows table contains only one record where title = Dexter (but the id can be different)
-Each record should display: tv_genres.name
-Results must be sorted in ascending order by the genre name
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
-guillaume@ubuntu:~/$ cat 14-my_genres.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
-Enter password: 
-name
-Crime
-Drama
-Mystery
-Suspense
-Thriller
-guillaume@ubuntu:~/$ 
+	The tv_shows table contains only one record where title = Dexter (but the id can be different)
+	Each record should display: tv_genres.name
+	Results must be sorted in ascending order by the genre name
+	You can use only one SELECT statement
+	The database name will be passed as an argument of the mysql command
+
+---
+
+	guillaume@ubuntu:~/$ cat 14-my_genres.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+	Enter password: 
+	name
+	Crime
+	Drama
+	Mystery
+	Suspense
+	Thriller
+	guillaume@ubuntu:~/$ 
 
     
-###15. Only Comedy
+### 15. Only Comedy
 - mandatory
 - Score: 65.0% (Checks completed: 100.0%)
 
@@ -552,22 +561,25 @@ Import the database dump from hbtn_0d_tvshows to your MySQL server: download (sa
 
 Write a script that lists all Comedy shows in the database hbtn_0d_tvshows.
 
-The tv_genres table contains only one record where name = Comedy (but the id can be different)
-Each record should display: tv_shows.title
-Results must be sorted in ascending order by the show title
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
-guillaume@ubuntu:~/$ cat 15-comedy_only.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
-Enter password: 
-title
-New Girl
-Silicon Valley
-The Big Bang Theory
-The Last Man on Earth
-guillaume@ubuntu:~/$ 
+	The tv_genres table contains only one record where name = Comedy (but the id can be different)
+	Each record should display: tv_shows.title
+	Results must be sorted in ascending order by the show title
+	You can use only one SELECT statement
+	The database name will be passed as an argument of the mysql command
+
+---
+
+	guillaume@ubuntu:~/$ cat 15-comedy_only.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+	Enter password: 
+	title
+	New Girl
+	Silicon Valley
+	The Big Bang Theory
+	The Last Man on Earth
+	guillaume@ubuntu:~/$ 
 
     
-###16. List shows and genres
+### 16. List shows and genres
 - mandatory
 - Score: 65.0% (Checks completed: 100.0%)
 
@@ -575,34 +587,36 @@ Import the database dump from hbtn_0d_tvshows to your MySQL server: download (sa
 
 Write a script that lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows.
 
-If a show doesn’t have a genre, display NULL in the genre column
-Each record should display: tv_shows.title - tv_genres.name
-Results must be sorted in ascending order by the show title and genre name
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
-guillaume@ubuntu:~/$ cat 16-shows_by_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
-Enter password: 
-title   name
-Better Call Saul    NULL
-Breaking Bad    Crime
-Breaking Bad    Drama
-Breaking Bad    Suspense
-Breaking Bad    Thriller
-Dexter  Crime
-Dexter  Drama
-Dexter  Mystery
-Dexter  Suspense
-Dexter  Thriller
-Game of Thrones Adventure
-Game of Thrones Drama
-Game of Thrones Fantasy
-Homeland    NULL
-House   Drama
-House   Mystery
-New Girl    Comedy
-Silicon Valley  Comedy
-The Big Bang Theory Comedy
-The Last Man on Earth   Comedy
-The Last Man on Earth   Drama
-guillaume@ubuntu:~/$ 
+	If a show doesn’t have a genre, display NULL in the genre column
+	Each record should display: tv_shows.title - tv_genres.name
+	Results must be sorted in ascending order by the show title and genre name
+	You can use only one SELECT statement
+	The database name will be passed as an argument of the mysql command
 
+---
+
+	guillaume@ubuntu:~/$ cat 16-shows_by_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+	Enter password: 
+	title   name
+	Better Call Saul    NULL
+	Breaking Bad    Crime
+	Breaking Bad    Drama
+	Breaking Bad    Suspense
+	Breaking Bad    Thriller
+	Dexter  Crime
+	Dexter  Drama
+	Dexter  Mystery
+	Dexter  Suspense
+	Dexter  Thriller
+	Game of Thrones Adventure
+	Game of Thrones Drama
+	Game of Thrones Fantasy
+	Homeland    NULL
+	House   Drama
+	House   Mystery
+	New Girl    Comedy
+	Silicon Valley  Comedy
+	The Big Bang Theory Comedy
+	The Last Man on Earth   Comedy
+	The Last Man on Earth   Drama
+	guillaume@ubuntu:~/$ 
