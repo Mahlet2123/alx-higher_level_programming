@@ -61,7 +61,7 @@ In the container, credentials are root/root
 
 
 	$ service mysql start                                                   
-	* Starting MySQL database server mysqld 
+	\* Starting MySQL database server mysqld 
 	$
 	$ cat 0-list_databases.sql | mysql -uroot -p                               
 	Database                                                                                   
