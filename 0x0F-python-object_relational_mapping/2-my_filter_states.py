@@ -18,9 +18,9 @@ if __name__ == "__main__":
     argument = argv[4]
 
     cur.execute(
-        """SELECT * FROM hbtn_0e_0_usa.states WHERE name = %s ORDER BY \
+        """SELECT * FROM states WHERE name = %s ORDER BY \
 states.id ASC""",
-        (argument,),
+        (argument,)
     )
     rows = cur.fetchall()
     for row in rows:
