@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 List states Module from the database hbtn_0e_0_usa
+code should not be executed when imported
 """
 
 if __name__ == "__main__":
