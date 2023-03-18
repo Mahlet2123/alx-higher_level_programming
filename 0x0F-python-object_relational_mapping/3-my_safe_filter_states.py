@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     cur.execute(
         """SELECT * FROM states WHERE states.name = %s ORDER BY \
-states.id ASC""", (argument,))
+states.id ASC""", (argument, )
     )
     rows = cur.fetchall()
     for row in rows:
