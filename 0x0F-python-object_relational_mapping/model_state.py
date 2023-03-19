@@ -8,9 +8,9 @@ from sqlalchemy import Column, Integer, String
 Base = declarative_base()
 
 
-class state(base):
+class State(Base):
     """ state class """
     __tablename__ = 'states'
 
-    id = column(Integer, autoincrement=True, nullable = False, primary-key = True)
-    name = column(String(128), nullable=False)
+    id = Column(Integer, autoincrement=True, nullable=False, primary_key=True)
+    name = Column(String(128), nullable=False)
