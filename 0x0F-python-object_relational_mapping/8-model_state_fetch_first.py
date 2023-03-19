@@ -16,5 +16,5 @@ if __name__ == "__main__":
     if instance is not None:
         print("{}: {}".format(instance.id, instance.name))
     else:
-        print()
+        print("Nothing")
     session.close()
