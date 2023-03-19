@@ -20,7 +20,8 @@ if __name__ == "__main__":
     argument = sys.argv[4]
 
     instance = (
-        session.query(State).filter(State.name == (argument,)).order_by(State.id).all()
+        session.query(State).filter(State.name == (argument,)).
+        order_by(State.id).all()
     )
     if instance:
         print("{}".format(instance[0].id))

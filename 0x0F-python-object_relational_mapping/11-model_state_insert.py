@@ -20,7 +20,8 @@ if __name__ == "__main__":
     session.add(new_state)
     session.commit()
     instance = (
-        session.query(State).filter(State.name == new_state.name).order_by(State.id).all()
+        session.query(State).filter(State.name == new_state.name).
+        order_by(State.id).all()
     )
     if instance:
         print("{}".format(instance[0].id))
