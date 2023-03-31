@@ -1,3 +1,3 @@
 #!/bin/bash
-# sends DELETE
-curl -sX 'DELETE' $1
+# sends a req to a URL and displays size of response
+curl -X DELETE  $1
