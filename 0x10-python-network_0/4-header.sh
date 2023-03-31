@@ -1,3 +1,3 @@
 #!/bin/bash
-# sends GET req with header var
-curl -s -H "X-School-User-Id:98" "$1"
+# Bash script that sends a DELETE request to the URL 
+curl -sH "X-School-User-Id:98" $1
