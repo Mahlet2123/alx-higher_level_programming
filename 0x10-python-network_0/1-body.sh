@@ -1,3 +1,4 @@
 #!/bin/bash
-# displays body of 200 status code response
-curl -sL $1
+# sends a req to a URL and displays size of response
+curl -s -w "\n%{http_code}\n" $1 | sed -n '/^200$/{:a;n;p;ba;}'
+
