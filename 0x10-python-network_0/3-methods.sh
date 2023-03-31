@@ -1,3 +1,3 @@
 #!/bin/bash
-# displays all HTTP methods acceptable by server
-curl -sI $1 | grep Allow | cut -d ' ' -f2-
+# Bash script that sends a DELETE request to the URL 
+curl -sIX OPTIONS $1 | grep "Allow" | cut -d " " -f2-4
