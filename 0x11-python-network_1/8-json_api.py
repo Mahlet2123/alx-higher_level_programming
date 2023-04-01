@@ -1,12 +1,18 @@
 #!/usr/bin/python3
-""" sends a POST request to the passed URL with the email as a parameter """
+"""takes letter and sends a POST req to http://0.0.0.0:5000/search_user
+with the letter as a parameter."""
 import requests
-import sys
+from sys import argv
 
 
-if __name__ == "__main__":
-    url = http://0.0.0.0:5000/search_user
-    values = {"q": sys.argv[1]}
-
-    res = requests.post(url, data=values)
-    print(res.text)
+if __name__ == '__main__':
+    letter = {'q': argv[1][0] if len(argv) > 1 else ''}
+    r = requests.post('http://0.0.0.0:5000/search_user', data=letter)
+    try:
+        response = r.json()
+        if response:
+            print('[{}] {}'.format(response.get('id'), response.get('name')))
+        else:
+            print('No result')
+    except ValueError:
+        print('Not a valid JSON')
