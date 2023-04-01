@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Python script that fetches https://alx-intranet.hbtn.io/status """
+"""  displays the value of the X-Request-Id variable in the header """
 import urllib.request
 import sys
 
