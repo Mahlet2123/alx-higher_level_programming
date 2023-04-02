@@ -12,7 +12,7 @@ if __name__ == "__main__":
     if (len(sys.argv) == 1):
         values = {"q": ''}
     else:
-        values = {"q": sys.argv[1][0]}
+        values = {"q": sys.argv[1]}
 
     res = requests.post(url, data=values)
     try:
