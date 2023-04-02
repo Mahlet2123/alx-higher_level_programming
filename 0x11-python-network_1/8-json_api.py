@@ -12,13 +12,14 @@ if __name__ == "__main__":
     if (len(sys.argv) == 1):
         values = {"q": ''}
     else:
-        values = {"q": sys.argv[1]}
+        values = {"q": sys.argv[1][0]}
 
     res = requests.post(url, data=values)
     try:
         res_json = res.json()
         if (res_json):
             print("[{}] {}".format(res_json.get('id'), res_json.get('name')))
+            """print(type(res_json.get('name')))"""
         else:
             print("No result")
     except TypeError:
