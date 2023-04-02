@@ -18,7 +18,7 @@ if __name__ == "__main__":
     try:
         res_json = res.json()
         if (res_json):
-            print("[{}] {}".format(res_json['id'], res_json['name']))
+            print("[{}] {}".format(res_json.get('id'), res_json.get('name')))
         else:
             print("No result")
     except TypeError:
