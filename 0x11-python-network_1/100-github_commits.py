@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-""" Github code challenge"""
+""" list 10 commits (from the most recent to oldest) """
 import requests
-from sys import argv
+import sys
+
 
 if __name__ == "__main__":
-    url = "https://api.github.com/repos/{}/{}/commits"\
-          .format(argv[2], argv[1])
-    r = requests.get(url)
-    n = 0
-    for i in r.json():
-        if n < 10:
-            print("{}: {}".format(i.get("sha"),
-                  i.get("commit").get("author").get("name")))
-        n += 1
+    repo = sys.argv[1]  # Repository name
+    owner = sys.argv[2]  # Owner name
+    url = 'https://api.github.com/repos/{}/{}/commits?author=rails&per_page=10'.format(owner, repo)
+
+    response = requests.get(url)
+    commits = response.json()
+
+    for commit in commits:
+       print("{}: {}".format(commit.get('sha'), commit.get('commit').get('author').get('name')))

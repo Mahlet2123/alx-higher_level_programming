@@ -13,5 +13,6 @@ if __name__ == "__main__":
     response = requests.get(url, auth=(username, token))
     try:
         print(response.json().get('id'))
+        #print(response.json())
     except ValueError:
         print('Not a valid JSON')
