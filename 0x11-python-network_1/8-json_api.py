@@ -8,15 +8,13 @@ import sys
 
 
 if __name__ == "__main__":
-    url = "http://0.0.0.0:5000/search_user"
-    values = {'q': sys.argv[1] if len(sys.argv) > 1 else ''}
+    values = {"q": sys.argv[1] if len(sys.argv) > 1 else ""}
 
-    res = requests.post(url, data=values)
+    res = requests.post("http://0.0.0.0:5000/search_user", data=values)
     try:
         res_json = res.json()
-        if (res_json):
-            print("[{}] {}".format(res_json.get('id'),
-                res_json.get('name')))
+        if res_json:
+            print("[{}] {}".format(res_json.get("id"), res_json.get("name")))
         else:
             print("No result")
     except TypeError:
