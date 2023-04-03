@@ -5,8 +5,5 @@ import sys
 
 
 if __name__ == "__main__":
-    req = requests.get(sys.argv[1])
-    if req.headers['X-Request-Id']:
-        print(req.headers['X-Request-Id'])
-    else:
-        print('None')
+    res = requests.get(sys.argv[1])
+    print(res.headers.get('X-Request-Id'))
