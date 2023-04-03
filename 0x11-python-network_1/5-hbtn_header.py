@@ -9,4 +9,4 @@ if __name__ == "__main__":
     if req.headers['X-Request-Id']:
         print(req.headers['X-Request-Id'])
     else:
-        pass
+        print('None')
