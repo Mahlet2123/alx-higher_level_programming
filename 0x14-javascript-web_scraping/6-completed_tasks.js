@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const request = require('/usr/lib/node_modules/request');
+const request = require('request');
 request(process.argv[2], (error, response, body) => {
   if (error) throw new Error(error);
   const tasks = JSON.parse(body);

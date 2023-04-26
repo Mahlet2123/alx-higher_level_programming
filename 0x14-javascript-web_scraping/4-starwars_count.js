@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const request = require('/usr/lib/node_modules/request');
+const request = require('request');
 const url = process.argv[2];
 const characterId = '18';
 let count = 0;
