@@ -9,12 +9,21 @@ request.get(url, (error, response, body) => {
     console.error(error);
   } else {
     const characters = JSON.parse(body).characters;
-    for (const j in characters) {
-      request2.get(characters[j], (error, response, body) => {
+    const numCharacters = characters.length;
+    const characterNames = [];
+    let count = 0;
+    for (let i = 0; i < characters.length; i++) {
+      request2.get(characters[i], (error, response, body) => {
         if (error) {
           console.error(error);
         } else {
-          console.log(JSON.parse(body).name);
+          characterNames[i] = JSON.parse(body).name;
+          count++;
+          if (count === numCharacters) {
+            for (const name of characterNames) {
+              console.log(name);
+            }
+          }
         }
       });
     }
